@@ -18,15 +18,15 @@ public struct OCLogger: OCLoggerable {
     }
     
     public static func info(_ messages: Any..., file: String = #file, function: String = #function, line: Int = #line) {
-        printLog(level: .debug, messages: messages, file: file, function: function, line: line)
+        printLog(level: .info, messages: messages, file: file, function: function, line: line)
     }
 
     public static func warn(_ messages: Any..., file: String = #file, function: String = #function, line: Int = #line) {
-        printLog(level: .debug, messages: messages, file: file, function: function, line: line)
+        printLog(level: .warn, messages: messages, file: file, function: function, line: line)
     }
 
     public static func error(_ errors: Any..., file: String = #file, function: String = #function, line: Int = #line) {
-        printLog(level: .debug, messages: errors, file: file, function: function, line: line)
+        printLog(level: .error, messages: errors, file: file, function: function, line: line)
     }
 }
 
